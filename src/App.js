@@ -2,24 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-import TextInput from './TextInput';
+import TextInput from './components/UI/TextInput';
 import validate from './validate';
-import TextArea from './TextArea';
-import Email from './Email';
-import Select from './Select';
-import Radio from './Radio';
-
+import TextArea from './components/UI/TextArea';
+import Email from './components/UI/Email';
+import Select from './components/UI/Select';
+import Radio from './components/UI/Radio';
 
 class App extends Component {
-
-
   constructor() {
     super();
 
     this.state = {
       formIsValid: false,
       formControls: {
-
         name: {
           value: '',
           placeholder: 'What is your name',
@@ -84,7 +80,6 @@ class App extends Component {
 
 
   changeHandler = event => {
-
     const name = event.target.name;
     const value = event.target.value;
 
